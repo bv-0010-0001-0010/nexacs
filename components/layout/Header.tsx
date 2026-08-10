@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { primaryNav, employerNav, workerNav, contactNav } from "@/lib/content/nav";
+import { Logo } from "@/components/layout/Logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -31,24 +31,17 @@ export function Header() {
         scrolled || open ? "border-white/10" : "border-white/0"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-2.5 md:px-10">
+      <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-3 px-6 py-2.5 md:px-10 2xl:px-14">
         <Link href="/" className="focus-ring shrink-0" aria-label="Nexa Construction Solutions — Home">
-          <Image
-            src="/images/brand/nexa-header-lockup.png"
-            alt="Nexa Construction Solutions"
-            width={1469}
-            height={340}
-            priority
-            className="h-12 w-auto md:h-14"
-          />
+          <Logo gapClassName="gap-2.5 sm:gap-3 lg:gap-3" />
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-5 xl:flex xl:gap-6">
+        <nav aria-label="Primary" className="hidden items-center gap-4 xl:flex xl:gap-5 2xl:gap-8">
           {primaryNav.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`focus-ring text-sm font-medium tracking-wide text-concrete-200 uppercase transition-colors hover:text-amber-500 ${
+              className={`focus-ring text-sm font-medium tracking-wide text-concrete-200 uppercase transition-colors hover:text-amber-500 2xl:text-base ${
                 pathname === link.href ? "text-amber-500" : ""
               }`}
             >
@@ -57,22 +50,22 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 xl:flex xl:gap-3">
+        <div className="hidden items-center gap-2 xl:flex xl:gap-3 2xl:gap-4">
           <Link
             href={contactNav.href}
-            className="focus-ring text-sm font-medium tracking-wide text-concrete-200 uppercase hover:text-amber-500"
+            className="focus-ring text-sm font-medium tracking-wide text-concrete-200 uppercase hover:text-amber-500 2xl:text-base"
           >
             {contactNav.label}
           </Link>
           <Link
             href={workerNav.href}
-            className="focus-ring border border-white/30 px-3 py-2 text-sm font-semibold tracking-wide text-offwhite uppercase hover:border-white"
+            className="focus-ring border border-white/30 px-3 py-2 text-sm font-semibold tracking-wide text-offwhite uppercase hover:border-white 2xl:px-4 2xl:py-2.5 2xl:text-base"
           >
             {workerNav.label}
           </Link>
           <Link
             href="/request-workers"
-            className="focus-ring border border-amber-500 bg-amber-500 px-3 py-2 text-sm font-semibold tracking-wide text-charcoal-950 uppercase hover:bg-amber-400"
+            className="focus-ring border border-amber-500 bg-amber-500 px-3 py-2 text-sm font-semibold tracking-wide text-charcoal-950 uppercase hover:bg-amber-400 2xl:px-4 2xl:py-2.5 2xl:text-base"
           >
             Request Workers
           </Link>

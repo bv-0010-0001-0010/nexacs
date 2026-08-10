@@ -1,21 +1,21 @@
-import Image from "next/image";
 import Link from "next/link";
 import { company, contactPlaceholders, phoneHref } from "@/lib/content/company";
 import { footerColumns, locationLinks } from "@/lib/content/nav";
+import { Logo } from "@/components/layout/Logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-charcoal-950 text-concrete-300">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+      <div className="mx-auto max-w-[1680px] px-6 py-16 md:px-10 2xl:px-14">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-6">
           <div className="col-span-2">
-            <Image
-              src="/images/brand/nexa-header-lockup.png"
-              alt="Nexa Construction Solutions"
-              width={1469}
-              height={340}
-              className="h-14 w-auto"
-            />
+            <Link href="/" className="focus-ring inline-block" aria-label="Nexa Construction Solutions — Home">
+              <Logo
+                iconClassName="h-11 sm:h-12 lg:h-14 2xl:h-20"
+                wordClassName="h-6 sm:h-7 lg:h-8 2xl:h-10"
+                subtitleClassName="text-[9px] sm:text-[10px] lg:text-xs 2xl:text-sm"
+              />
+            </Link>
             <address className="mt-5 not-italic text-sm leading-relaxed">
               {company.legalName}
               <br />
