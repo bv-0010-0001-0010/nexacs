@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   path: "/register",
 });
 
-const tradeOptions = ["General Labour", ...trades.map((trade) => trade.name), "Other"];
+const tradeOptions = [...trades.map((trade) => trade.name), "Other"];
 const experienceOptions = ["Under 1 year", "1–3 years", "3–5 years", "5–10 years", "10+ years"];
 const availabilityOptions = ["Immediately", "Within 2 weeks", "Within a month", "Flexible / Future opportunities"];
 

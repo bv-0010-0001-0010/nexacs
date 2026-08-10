@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -26,15 +27,20 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b transition-colors duration-300 ${
-        scrolled || open
-          ? "border-white/10 bg-charcoal-950/95 backdrop-blur"
-          : "border-white/0 bg-charcoal-950/70 backdrop-blur-sm"
+      className={`sticky top-0 z-50 w-full border-b bg-black transition-colors duration-300 ${
+        scrolled || open ? "border-white/10" : "border-white/0"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 md:px-10">
-        <Link href="/" className="focus-ring font-display text-xl font-semibold tracking-[0.15em] text-offwhite uppercase">
-          Nexa <span className="text-amber-500">Construction</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3 md:px-10">
+        <Link href="/" className="focus-ring shrink-0" aria-label="Nexa Construction Solutions — Home">
+          <Image
+            src="/images/brand/nexa-header-lockup.png"
+            alt="Nexa Construction Solutions"
+            width={815}
+            height={200}
+            priority
+            className="h-14 w-auto md:h-16"
+          />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">

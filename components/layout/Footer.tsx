@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { company, contactPlaceholders } from "@/lib/content/company";
 import { footerColumns, locationLinks } from "@/lib/content/nav";
@@ -8,10 +9,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-6">
           <div className="col-span-2">
-            <p className="font-display text-lg font-semibold tracking-[0.15em] text-offwhite uppercase">
-              Nexa <span className="text-amber-500">Construction</span>
-            </p>
-            <address className="mt-4 not-italic text-sm leading-relaxed">
+            <Image
+              src="/images/brand/nexa-header-lockup.png"
+              alt="Nexa Construction Solutions"
+              width={815}
+              height={200}
+              className="h-9 w-auto"
+            />
+            <address className="mt-5 not-italic text-sm leading-relaxed">
               {company.legalName}
               <br />
               ABN: {company.abn}

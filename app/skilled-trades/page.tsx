@@ -11,7 +11,7 @@ import { trades } from "@/lib/content/trades";
 export const metadata: Metadata = buildMetadata({
   title: "Skilled Construction Workers & Trades | Nexa Construction Solutions",
   description:
-    "Nexa Construction Solutions supplies skilled construction workers and trades — carpenters, electricians, plumbers, steel workers, concreters and more — across NSW.",
+    "Nexa Construction Solutions supplies skilled construction workers and trades — carpenters, bricklayers, painters, tilers, plasterers, welders and more — across NSW.",
   path: "/skilled-trades",
 });
 

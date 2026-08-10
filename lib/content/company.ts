@@ -11,7 +11,7 @@ export const company = {
     country: "Australia",
   },
   addressFull: "589 Withers Road, Rouse Hill NSW 2155, Australia",
-  email: null as string | null,
+  email: "admin@nexacs.com.au" as string | null,
   phone: null as string | null,
   serviceAreas: ["Sydney", "Western Sydney", "Rouse Hill", "New South Wales"],
   category: "Construction Labour Hire & Workforce Solutions",

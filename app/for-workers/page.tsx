@@ -78,16 +78,14 @@ export default function ForWorkersPage() {
           Roles Nexa places workers into.
         </h2>
         <div className="mt-8 flex flex-wrap gap-3">
-          {["General Construction Workers", ...trades.filter((t) => t.name !== "General Construction Workers").map((t) => t.name)].map(
-            (label) => (
-              <span
-                key={label}
-                className="border border-charcoal-900/15 bg-offwhite px-4 py-2 text-xs font-semibold tracking-wide text-charcoal-800 uppercase"
-              >
-                {label}
-              </span>
-            ),
-          )}
+          {trades.map((trade) => (
+            <span
+              key={trade.name}
+              className="border border-charcoal-900/15 bg-offwhite px-4 py-2 text-xs font-semibold tracking-wide text-charcoal-800 uppercase"
+            >
+              {trade.name}
+            </span>
+          ))}
         </div>
       </Section>
 

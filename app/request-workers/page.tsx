@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   path: "/request-workers",
 });
 
-const workerTypes = ["General Labour", ...trades.map((trade) => trade.name), "Not Sure — Advise Me"];
+const workerTypes = [...trades.map((trade) => trade.name), "Not Sure — Advise Me"];
 
 const reassurances = [
   "No obligation to proceed after submitting a request.",
