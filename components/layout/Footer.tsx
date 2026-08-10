@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { company, contactPlaceholders } from "@/lib/content/company";
+import { company, contactPlaceholders, phoneHref } from "@/lib/content/company";
 import { footerColumns, locationLinks } from "@/lib/content/nav";
 
 export function Footer() {
@@ -12,9 +12,9 @@ export function Footer() {
             <Image
               src="/images/brand/nexa-header-lockup.png"
               alt="Nexa Construction Solutions"
-              width={815}
-              height={200}
-              className="h-9 w-auto"
+              width={1469}
+              height={340}
+              className="h-14 w-auto"
             />
             <address className="mt-5 not-italic text-sm leading-relaxed">
               {company.legalName}
@@ -36,8 +36,8 @@ export function Footer() {
                 contactPlaceholders.email
               )}
               <br />
-              {company.phone ? (
-                <a href={`tel:${company.phone}`} className="focus-ring hover:text-amber-500">
+              {company.phone && phoneHref ? (
+                <a href={phoneHref} className="focus-ring hover:text-amber-500">
                   {company.phone}
                 </a>
               ) : (

@@ -12,7 +12,7 @@ export const company = {
   },
   addressFull: "589 Withers Road, Rouse Hill NSW 2155, Australia",
   email: "admin@nexacs.com.au" as string | null,
-  phone: null as string | null,
+  phone: "+61 450 708 723" as string | null,
   serviceAreas: ["Sydney", "Western Sydney", "Rouse Hill", "New South Wales"],
   category: "Construction Labour Hire & Workforce Solutions",
   siteUrl: "https://www.nexaconstructionsolutions.com.au",
@@ -22,3 +22,5 @@ export const contactPlaceholders = {
   email: "Email — to be confirmed",
   phone: "Phone — to be confirmed",
 };
+
+export const phoneHref = company.phone ? `tel:${company.phone.replace(/\s/g, "")}` : null;

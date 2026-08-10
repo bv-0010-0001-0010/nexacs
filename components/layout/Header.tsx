@@ -31,19 +31,19 @@ export function Header() {
         scrolled || open ? "border-white/10" : "border-white/0"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3 md:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-2.5 md:px-10">
         <Link href="/" className="focus-ring shrink-0" aria-label="Nexa Construction Solutions — Home">
           <Image
             src="/images/brand/nexa-header-lockup.png"
             alt="Nexa Construction Solutions"
-            width={815}
-            height={200}
+            width={1469}
+            height={340}
             priority
-            className="h-14 w-auto md:h-16"
+            className="h-12 w-auto md:h-14"
           />
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-5 xl:flex xl:gap-6">
           {primaryNav.map((link) => (
             <Link
               key={link.href}
@@ -57,7 +57,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 xl:flex xl:gap-3">
           <Link
             href={contactNav.href}
             className="focus-ring text-sm font-medium tracking-wide text-concrete-200 uppercase hover:text-amber-500"
@@ -66,13 +66,13 @@ export function Header() {
           </Link>
           <Link
             href={workerNav.href}
-            className="focus-ring border border-white/30 px-4 py-2 text-sm font-semibold tracking-wide text-offwhite uppercase hover:border-white"
+            className="focus-ring border border-white/30 px-3 py-2 text-sm font-semibold tracking-wide text-offwhite uppercase hover:border-white"
           >
             {workerNav.label}
           </Link>
           <Link
             href="/request-workers"
-            className="focus-ring border border-amber-500 bg-amber-500 px-4 py-2 text-sm font-semibold tracking-wide text-charcoal-950 uppercase hover:bg-amber-400"
+            className="focus-ring border border-amber-500 bg-amber-500 px-3 py-2 text-sm font-semibold tracking-wide text-charcoal-950 uppercase hover:bg-amber-400"
           >
             Request Workers
           </Link>
@@ -84,7 +84,7 @@ export function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="focus-ring flex flex-col gap-1.5 p-2 lg:hidden"
+          className="focus-ring flex flex-col gap-1.5 p-2 xl:hidden"
         >
           <span className={`h-0.5 w-6 bg-offwhite transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
           <span className={`h-0.5 w-6 bg-offwhite transition-opacity ${open ? "opacity-0" : ""}`} />
@@ -100,7 +100,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-white/10 lg:hidden"
+            className="overflow-hidden border-t border-white/10 xl:hidden"
           >
             <nav aria-label="Mobile" className="flex flex-col gap-1 px-6 py-4">
               {[...primaryNav, employerNav, workerNav, contactNav].map((link) => (

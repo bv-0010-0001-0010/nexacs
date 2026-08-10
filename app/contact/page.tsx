@@ -5,7 +5,7 @@ import { Section, Eyebrow } from "@/components/ui/Section";
 import { FormShell } from "@/components/ui/form/FormShell";
 import { TextField, SelectField, TextAreaField } from "@/components/ui/form/fields";
 import { buildMetadata } from "@/lib/seo";
-import { company, contactPlaceholders } from "@/lib/content/company";
+import { company, contactPlaceholders, phoneHref } from "@/lib/content/company";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Nexa Construction Solutions | Construction Services NSW",
@@ -99,8 +99,8 @@ export default function ContactPage() {
                 contactPlaceholders.email
               )}
               <br />
-              {company.phone ? (
-                <a href={`tel:${company.phone}`} className="focus-ring hover:text-amber-600">
+              {company.phone && phoneHref ? (
+                <a href={phoneHref} className="focus-ring hover:text-amber-600">
                   {company.phone}
                 </a>
               ) : (
